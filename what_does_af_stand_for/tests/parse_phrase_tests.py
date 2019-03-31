@@ -12,6 +12,7 @@ import what_does_af_stand_for
         ("always funny", "always", "funny"),
         ("Aha! Friday!", "Aha!", "Friday!"),
         ("Abercrombie & Fitch", "Abercrombie", "Fitch"),
+        ("Atima Fwitbread.", "Atima", "Fwitbread"),
     ],
 )
 def test_parse_phrase(phrase, a_word, f_word):
