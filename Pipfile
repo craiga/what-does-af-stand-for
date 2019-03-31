@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+django = "*"
+django-debug-toolbar = "*"
+django-heroku = "*"
+gunicorn = "*"
+psycopg2 = "*"
+raven = "*"
+
+[dev-packages]
+black = "==19.3b0"
+ipython = "*"
+isort = "*"
+model-mommy = "*"
+pyenchant = "*"
+pylint = "*"
+pylint-django = "*"
+pytest = "*"
+pytest-django = "*"
