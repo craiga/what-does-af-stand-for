@@ -1,4 +1,4 @@
-"""Tests"""
+"""Tests for parse_phrase."""
 
 import pytest
 
@@ -15,6 +15,7 @@ import what_does_af_stand_for
     ],
 )
 def test_parse_phrase(phrase, a_word, f_word):
+    """Test parse_phrase."""
     assert what_does_af_stand_for.parse_phrase(phrase) == (a_word, f_word)
 
 
@@ -23,5 +24,6 @@ def test_parse_phrase(phrase, a_word, f_word):
     ["Alpha Beta", "Egg Farts", "Awful", "AWFUL", "zebra aardvark falcon gibbon"],
 )
 def test_bad_phrase(bad_phrase):
+    """Test that bad phrases result in CouldNotParsePhraseErrors."""
     with pytest.raises(what_does_af_stand_for.CouldNotParsePhraseError):
         what_does_af_stand_for.parse_phrase(bad_phrase)
