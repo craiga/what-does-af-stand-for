@@ -37,3 +37,18 @@ class AWord(WordModel):
 
 class FWord(WordModel):
     pass
+
+
+class Combination(models.Model):
+    """A combination of an A- and an F-word."""
+
+    a_word = models.ForeignKey(AWord, on_delete=models.CASCADE)
+    f_word = models.ForeignKey(FWord, on_delete=models.CASCADE)
+    thumbs_up = models.PositiveIntegerField(default=0)
+    thumbs_down = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.a_word} {self.f_word} 👍 {self.thumbs_up} 👎 {self.thumbs_down}"
+
+    class Meta:
+        unique_together = ["a_word", "f_word"]
