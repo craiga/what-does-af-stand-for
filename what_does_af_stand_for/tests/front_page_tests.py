@@ -1,4 +1,4 @@
-"""Tests"""
+"""Front page tests."""
 
 import pytest
 from model_mommy import mommy
