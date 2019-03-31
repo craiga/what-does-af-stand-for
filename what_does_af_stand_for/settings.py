@@ -111,7 +111,7 @@ STATIC_URL = "/static/"
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
-    "root": {"level": "WARNING", "handlers": ["sentry"]},
+    "root": {"level": "WARNING", "handlers": ["sentry", "console"]},
     "formatters": {
         "heroku": {
             "format": (
@@ -131,7 +131,7 @@ LOGGING = {
         "null": {"level": "DEBUG", "class": "logging.NullHandler"},
         "sentry": {
             "level": "WARNING",
-            "class": ("raven.contrib.django.raven_compat.handlers" ".SentryHandler"),
+            "class": ("raven.contrib.django.raven_compat.handlers.SentryHandler"),
         },
         "console": {
             "level": "DEBUG",
