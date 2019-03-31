@@ -10,7 +10,8 @@ jobs:
       - image: circleci/python:3.6
         environment:
           PIPENV_VENV_IN_PROJECT: 1
-          DATABASE_URL: postgresql://what_does_af_stand_for:security_is_important@localhost/what_does_af_stand_for?sslmode=disable
+          DATABASE_URL: postgresql://what_does_af_stand_for:security_is_important@localhost/what_does_af_stand_for
+          DATABASE_NO_SSL_REQUIRE: True
       - image: circleci/postgres:11
         environment:
           POSTGRES_USER: what_does_af_stand_for
