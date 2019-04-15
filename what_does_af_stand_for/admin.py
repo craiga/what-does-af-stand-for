@@ -6,3 +6,4 @@ from what_does_af_stand_for import models
 
 admin.site.register(models.AWord)
 admin.site.register(models.FWord)
+admin.site.register(models.Combination)

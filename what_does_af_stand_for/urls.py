@@ -9,7 +9,7 @@ import debug_toolbar
 from what_does_af_stand_for import views
 
 urlpatterns = [
-    path("", views.what_does_af_stand_for_view, name="what_does_af_stand_for"),
+    path("", views.FrontPageView.as_view(), name="front_page"),
     path("admin/", admin.site.urls),
 ]
 
